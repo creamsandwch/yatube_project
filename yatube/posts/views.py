@@ -1,4 +1,3 @@
-from django.http import HttpResponse
 from django.shortcuts import render
 
 # Create your views here.
@@ -10,4 +9,5 @@ def index(request):
 
 
 def group_posts(request, slug):
-    return HttpResponse(f'Пост номер {slug}')
+    template = 'posts/group_list.html'
+    return render(request, template)
