@@ -31,10 +31,10 @@
       </nav>      
     </header>
     <main>
-      {% block content %}
       <!-- класс py-5 создает отступы сверху и снизу блока -->
-        {% for post in posts %}
-        <div class="container py-5">
+      <div class="container py-5">
+        {% block content %}
+          {% for post in posts %}
           <article>
             <ul>
               <li>
@@ -45,15 +45,15 @@
               </li>
             </ul>
             <p>{{ post.text }}</p>
-            {% if posts.group %}
-              <a href="">все записи группы</a>
-            {% endif %}
+            <!-- {% if posts.group %} -->
+              <a href="{% url 'posts:group_list' post.group.slug %}">все записи группы</a>
+            <!-- {% endif %} -->
           </article>
-        {% if not forloop.last %}<hr>{% endif %}
-        <!-- под последним постом нет линии -->
-        </div>
-        {% endfor %}
-      {% endblock %}  
+          {% if not forloop.last %}<hr>{% endif %}
+          <!-- под последним постом нет линии -->
+          {% endfor %}
+        {% endblock %}  
+      </div>
     </main>
     <footer class="page-footer font-small blue border-top">
       <div class="footer-copyright text-center py-3">© 2020 Copyright 
