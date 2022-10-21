@@ -45,10 +45,6 @@
               </li>
             </ul>
             <p>{{ post.text }}</p>
-            <!-- {% if posts.group %} -->
-              <a href="{% url 'posts:group_list' post.group.slug %}">все записи группы</a>
-            <!-- {% endif %} -->
-          </article>
           {% if not forloop.last %}<hr>{% endif %}
           <!-- под последним постом нет линии -->
           {% endfor %}
