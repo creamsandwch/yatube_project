@@ -1,4 +1,4 @@
-### Проект 'социальная сеть "Yatube"''
+### Проект 'социальная сеть "Yatube"'
 # Описание:
 Платформа для публикаций.
 # технологии:
@@ -17,3 +17,5 @@ python manage.py runserver
 ```
 ### Автор:
 https://github.com/creamsandwch
+
+Финальная версия проекта: https://github.com/creamsandwch/hw05_final
